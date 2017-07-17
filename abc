@@ -1,0 +1,13 @@
+#! /bin/sh
+echo “AAA”
+    echo `pwd`
+    #osascript ./applescripta.scpt
+
+exec osascript <<EOF 
+       tell application "System Events" 
+         shut down
+       end tell
+
+EOF
+    echo "CCC"
+    exit 0

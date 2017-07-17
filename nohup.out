@@ -1,0 +1,686 @@
+[08:49:26]: [33mSeems like launching fastlane takes a while[0m
+[08:49:26]: [33mfastlane detected a Gemfile in this directory[0m
+[08:49:26]: [33mhowever it seems like you don't use `bundle exec`[0m
+[08:49:26]: [33mto launch fastlane faster, please use[0m
+[08:49:26]: 
+[08:49:26]: [4m[36m$ bundle exec fastlane beta[0m[0m
+[08:49:26]: [33mFor more information, check out https://guides.cocoapods.org/using/a-gemfile.html[0m
+[08:49:41]: [33mPlugin 'Pgyer' overwrites already loaded action 'pgyer'[0m
++-----------------------+---------+--------+
+|               [32mUsed plugins[0m               |
++-----------------------+---------+--------+
+| Plugin                | Version | Action |
++-----------------------+---------+--------+
+| fastlane-plugin-pgyer | 0.2.1   | pgyer  |
++-----------------------+---------+--------+
+
+[08:49:42]: [32m-------------------------------------------------[0m
+[08:49:42]: [32m--- Step: Verifying required fastlane version ---[0m
+[08:49:42]: [32m-------------------------------------------------[0m
+[08:49:42]: Your fastlane version 2.28.3 matches the minimum requirement of 2.28.3  ✅
+[08:49:42]: [32m------------------------------[0m
+[08:49:42]: [32m--- Step: default_platform ---[0m
+[08:49:42]: [32m------------------------------[0m
+[08:49:42]: [32mDriving the lane 'ios beta' 🚀[0m
+[08:49:43]: [32m------------------[0m
+[08:49:43]: [32m--- Step: sigh ---[0m
+[08:49:43]: [32m------------------[0m
+
++-------------------------------------+---------------------------+
+|                     [32mSummary for sigh 2.28.3[0m                     |
++-------------------------------------+---------------------------+
+| development                         | true                      |
+| adhoc                               | false                     |
+| skip_install                        | false                     |
+| force                               | false                     |
+| app_identifier                      | com.intelcent.wetalkwork  |
+| username                            | yzj11223344556677@163.com |
+| team_id                             | ZBN7V8GLHG                |
+| ignore_profiles_with_different_name | false                     |
+| skip_fetch_profiles                 | false                     |
+| skip_certificate_verification       | false                     |
+| platform                            | ios                       |
++-------------------------------------+---------------------------+
+
+[08:49:47]: Starting login with user 'yzj11223344556677@163.com'
+[08:49:54]: Successfully logged in
+[08:49:54]: Fetching profiles...
+[08:49:56]: Verifying certificates...
+[08:50:28]: Certificate for Provisioning Profile 'wt-dev-push' not available locally: DANMH3272E, skipping this one...
+[08:50:30]: [32mFound 1 matching profile(s)[0m
+[08:50:30]: [33mDownloading provisioning profile...[0m
+[08:50:33]: [32mSuccessfully downloaded provisioning profile...[0m
+[08:50:34]: Installing provisioning profile...
+[32m/Users/wake/Desktop/testsx/Development_com.intelcent.wetalkwork.mobileprovision[0m
+[08:50:35]: Setting Provisioning Profile type to 'development'
+[08:50:35]: [32m-----------------[0m
+[08:50:35]: [32m--- Step: gym ---[0m
+[08:50:35]: [32m-----------------[0m
+[08:50:46]: [4m[36m$ xcodebuild -list -project ./testsx.xcodeproj[0m[0m
+[08:50:57]: [33mCommand timed out after 10 seconds on try 1 of 4, trying again...[0m
+[08:51:07]: [33mCommand timed out after 10 seconds on try 2 of 4, trying again...[0m
+[08:51:17]: [33mCommand timed out after 10 seconds on try 3 of 4, trying again...[0m
+[08:51:27]: [33mCommand timed out after 10 seconds on try 4 of 4[0m
++--------------------+--------------------------------------+
+|                       [33mLane Context[0m                        |
++--------------------+--------------------------------------+
+| DEFAULT_PLATFORM   | ios                                  |
+| PLATFORM_NAME      | ios                                  |
+| LANE_NAME          | ios beta                             |
+| SIGH_PROFILE_PATH  | /Users/wake/Desktop/testsx/Developm  |
+|                    | ent_com.intelcent.wetalkwork.mobile  |
+|                    | provision                            |
+| SIGH_PROFILE_PATHS | ["/Users/wake/Desktop/testsx/Develo  |
+|                    | pment_com.intelcent.wetalkwork.mobi  |
+|                    | leprovision"]                        |
+| SIGH_UDID          | 0a8aa02e-eaf8-4558-a9c8-860031c7dc3  |
+|                    | 6                                    |
+| SIGH_UUID          | 0a8aa02e-eaf8-4558-a9c8-860031c7dc3  |
+|                    | 6                                    |
+| SIGH_PROFILE_TYPE  | development                          |
++--------------------+--------------------------------------+
+[08:51:27]: [31mxcodebuild -list timed-out after 30 seconds. You might need to recreate the user schemes. You can override the timeout value with the environment variable FASTLANE_XCODE_LIST_TIMEOUT[0m
+
++------+---------------------+-------------+
+|             [32mfastlane summary[0m             |
++------+---------------------+-------------+
+| Step | Action              | Time (in s) |
++------+---------------------+-------------+
+| 1    | Verifying required  | 0           |
+|      | fastlane version    |             |
+| 2    | default_platform    | 0           |
+| 3    | sigh                | 52          |
+| 💥   | [31mgym[0m                 | 51          |
++------+---------------------+-------------+
+
+[08:51:27]: [31mfastlane finished with errors[0m
+
+[32m#######################################################################[0m
+[32m# fastlane 2.46.1 is available. You are on 2.28.3.[0m
+[32m# You should use the latest version.[0m
+[32m# Please update using `fastlane update_fastlane`.[0m
+[32m#######################################################################[0m
+
+[32m2.46.1 Improved build error output[0m
+* [gym] Improve build error output to be more clear (#9727) via Felix Krause
+* Fix grammer mistakes in docs (#9731) via Justin Swart
+* Fix markdown formating in iTunesConnect (#9725) via Eugene Oskin
+* add the word 'you' that was missing (#9713) via Tim Myers
+
+This release will make it easier to see the raw `xcodebuild` error message when something goes wrong during code ssigning or building your app :rocket:
+
+[32m2.46.0 Overall improvements[0m
+* Catch OpenSSL SSL error as well as Faraday to show instructions (#9680) via Felix Krause
+* Improve error message instructions for OpenSSL errors (#9681) via Felix Krause
+* Recursively search through `apk` directory in gradle action (#9688) via Felix Krause
+* Update gym runner to explicitly return the path (#9705) via Felix Krause
+* Update gym action to work if no ipa path is returned (#9706) via Felix Krause
+* Fix gym action and implementation when user provide path instead of hash (#9701) via Felix Krause
+* Allow the slather action to accept multiple binary_basename and binary_file arguments (#9696) via Renaud Lienhart
+* Fix google_play_track_version_codes options (#9693) via Pan Thomakos
+* Plugin scores: follow redirects (#9659) via Felix Krause
+
+[32m2.45.0 Improved docs and bugfixes[0m
+* Improve documentation across all of fastlane (#9665) via Wolfgang Lutz
+* Fix using the wrong team ID/Name in precheck from Appfile (#9656) via Felix Krause
+* Remove Bundler.setup in favor of shelling out to the Bundler in a new plugin directory in unit tests. (#9650) via Jimmy Dee
+* Add verification of Xcode version when running fastlane (#9609) via Felix Krause
+* Imporve match nuke readme (#9635) via Felix Krause
+* Add `google_play_track_version_codes` action (#9634) via Pan Thomakos
+* Detect number of tests for fastlane plugins and score accordingly (#9632) via Felix Krause
+
+[32mTo see all new releases, open https://github.com/fastlane/fastlane/releases[0m
+
+[32mPlease update using `fastlane update_fastlane`[0m
+[31m
+[!] xcodebuild -list timed-out after 30 seconds. You might need to recreate the user schemes. You can override the timeout value with the environment variable FASTLANE_XCODE_LIST_TIMEOUT[0m
+fastlane could not check for updates error: execution expired
+[09:10:50]: [33mSeems like launching fastlane takes a while[0m
+[09:10:50]: [33mfastlane detected a Gemfile in this directory[0m
+[09:10:50]: [33mhowever it seems like you don't use `bundle exec`[0m
+[09:10:50]: [33mto launch fastlane faster, please use[0m
+[09:10:50]: 
+[09:10:50]: [4m[36m$ bundle exec fastlane beta[0m[0m
+[09:10:50]: [33mFor more information, check out https://guides.cocoapods.org/using/a-gemfile.html[0m
+[09:10:53]: [33mPlugin 'Pgyer' overwrites already loaded action 'pgyer'[0m
++-----------------------+---------+--------+
+|               [32mUsed plugins[0m               |
++-----------------------+---------+--------+
+| Plugin                | Version | Action |
++-----------------------+---------+--------+
+| fastlane-plugin-pgyer | 0.2.1   | pgyer  |
++-----------------------+---------+--------+
+
+[09:10:53]: [32m-------------------------------------------------[0m
+[09:10:53]: [32m--- Step: Verifying required fastlane version ---[0m
+[09:10:53]: [32m-------------------------------------------------[0m
+[09:10:53]: Your fastlane version 2.28.3 matches the minimum requirement of 2.28.3  ✅
+[09:10:53]: [32m------------------------------[0m
+[09:10:53]: [32m--- Step: default_platform ---[0m
+[09:10:53]: [32m------------------------------[0m
+[09:10:53]: [32mDriving the lane 'ios beta' 🚀[0m
+[09:10:53]: [32m------------------[0m
+[09:10:53]: [32m--- Step: sigh ---[0m
+[09:10:53]: [32m------------------[0m
+
++-------------------------------------+---------------------------+
+|                     [32mSummary for sigh 2.28.3[0m                     |
++-------------------------------------+---------------------------+
+| development                         | true                      |
+| adhoc                               | false                     |
+| skip_install                        | false                     |
+| force                               | false                     |
+| app_identifier                      | com.intelcent.wetalkwork  |
+| username                            | yzj11223344556677@163.com |
+| team_id                             | ZBN7V8GLHG                |
+| ignore_profiles_with_different_name | false                     |
+| skip_fetch_profiles                 | false                     |
+| skip_certificate_verification       | false                     |
+| platform                            | ios                       |
++-------------------------------------+---------------------------+
+
+[09:10:53]: Starting login with user 'yzj11223344556677@163.com'
+[09:10:57]: Successfully logged in
+[09:10:57]: Fetching profiles...
+[09:10:59]: Verifying certificates...
+[09:11:26]: Certificate for Provisioning Profile 'wt-dev-push' not available locally: DANMH3272E, skipping this one...
+[09:11:28]: [32mFound 1 matching profile(s)[0m
+[09:11:28]: [33mDownloading provisioning profile...[0m
+[09:11:30]: [32mSuccessfully downloaded provisioning profile...[0m
+[09:11:30]: Installing provisioning profile...
+[32m/Users/wake/Desktop/testsx/Development_com.intelcent.wetalkwork.mobileprovision[0m
+[09:11:30]: Setting Provisioning Profile type to 'development'
+[09:11:30]: [32m-----------------[0m
+[09:11:30]: [32m--- Step: gym ---[0m
+[09:11:30]: [32m-----------------[0m
+[09:11:32]: [4m[36m$ xcodebuild -list -project ./testsx.xcodeproj[0m[0m
+[09:11:42]: [33mCommand timed out after 10 seconds on try 1 of 4, trying again...[0m
+[09:11:52]: [33mCommand timed out after 10 seconds on try 2 of 4, trying again...[0m
+[09:12:02]: [33mCommand timed out after 10 seconds on try 3 of 4, trying again...[0m
+[09:12:09]: [4m[36m$ xcodebuild clean -showBuildSettings -scheme testsx -project ./testsx.xcodeproj[0m[0m
+
++----------------------+--------------------------------------+
+|                   [32mSummary for gym 2.28.3[0m                    |
++----------------------+--------------------------------------+
+| scheme               | testsx                               |
+| export_method        | development                          |
+| project              | ./testsx.xcodeproj                   |
+| destination          | generic/platform=iOS                 |
+| output_name          | testsx                               |
+| build_path           | /Users/wake/Library/Developer/Xcode  |
+|                      | /Archives/2017-07-14                 |
+| clean                | false                                |
+| output_directory     | .                                    |
+| silent               | false                                |
+| skip_package_ipa     | false                                |
+| use_legacy_build_api | false                                |
+| buildlog_path        | ~/Library/Logs/gym                   |
+| xcode_path           | /Applications/Xcode.app              |
++----------------------+--------------------------------------+
+
+[09:12:15]: [4m[36m$ set -o pipefail && xcodebuild -scheme testsx -project ./testsx.xcodeproj -destination 'generic/platform=iOS' -archivePath /Users/wake/Library/Developer/Xcode/Archives/2017-07-14/testsx\ 2017-07-14\ 09.12.15.xcarchive archive | tee /Users/wake/Library/Logs/gym/testsx-testsx.log | xcpretty[0m[0m
+[09:12:22]: [35m[33m▸[0m [39;1mBuilding[0m testsx/testsx [Release][0m
+[09:12:22]: [35m[33m▸[0m [39;1mCheck Dependencies[0m
+[09:12:23]: [35m[33m▸[0m [39;1mCompiling[0m ViewController.m[0m
+[09:12:33]: [35m[33m▸[0m [39;1mCompiling[0m main.m[0m
+[09:12:33]: [35m[33m▸[0m [39;1mCompiling[0m AppDelegate.m[0m
+[09:12:38]: [35m[33m▸[0m [39;1mCompiling[0m ViewController.m[0m
+[09:12:38]: [35m[33m▸[0m [39;1mCompiling[0m AppDelegate.m[0m
+[09:12:38]: [35m[33m▸[0m [39;1mCompiling[0m main.m[0m
+[09:12:38]: [35m[33m▸[0m [39;1mLinking[0m testsx[0m
+[09:12:39]: [35m[33m▸[0m [39;1mLinking[0m testsx[0m
+[09:12:41]: [35m[33m▸[0m [39;1mCompiling[0m Main.storyboard[0m
+[09:12:50]: [35m[33m▸[0m [39;1mCompiling[0m LaunchScreen.storyboard[0m
+[09:12:50]: [35m[33m▸[0m [39;1mProcessing[0m Info.plist[0m
+[09:12:50]: [35m[33m▸[0m [39;1mGenerating 'testsx.app.dSYM'[0m
+[09:12:51]: [35m[33m▸[0m [39;1mTouching[0m testsx.app[0m
+[09:12:51]: [35m[33m▸[0m [39;1mSigning[0m /Users/wake/Library/Developer/Xcode/DerivedData/testsx-gfihegjmktnpfkbwqjqtawoqcblo/Build/Intermediates/ArchiveIntermediates/testsx/InstallationBuildProductsLocation/Applications/testsx.app[0m
+[09:12:55]: [35m[33m▸[0m [39;1mTouching[0m testsx.app.dSYM[0m
+[09:13:13]: [35m[33m▸[0m [39;1mArchive[0m Succeeded[0m
+[09:13:19]: [33mGenerated plist file with the following values:[0m
+[09:13:19]: ▸ [35m-----------------------------------------[0m
+[09:13:19]: ▸ [35m{[0m
+[09:13:19]: ▸ [35m  "method": "development"[0m
+[09:13:19]: ▸ [35m}[0m
+[09:13:19]: ▸ [35m-----------------------------------------[0m
+[09:13:19]: [4m[36m$ /usr/bin/xcrun /Users/wake/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.28.3/gym/lib/assets/wrap_xcodebuild/xcbuild-safe.sh -exportArchive -exportOptionsPlist '/var/folders/60/0l_1znnd7ds3mfnnm2svn9t00000gn/T/gym_config20170714-1300-163kgb8.plist' -archivePath /Users/wake/Library/Developer/Xcode/Archives/2017-07-14/testsx\ 2017-07-14\ 09.12.15.xcarchive -exportPath '/var/folders/60/0l_1znnd7ds3mfnnm2svn9t00000gn/T/gym_output20170714-1300-9j6kp7' [0m[0m
++ xcodebuild -exportArchive -exportOptionsPlist /var/folders/60/0l_1znnd7ds3mfnnm2svn9t00000gn/T/gym_config20170714-1300-163kgb8.plist -archivePath '/Users/wake/Library/Developer/Xcode/Archives/2017-07-14/testsx 2017-07-14 09.12.15.xcarchive' -exportPath /var/folders/60/0l_1znnd7ds3mfnnm2svn9t00000gn/T/gym_output20170714-1300-9j6kp7
+2017-07-14 09:13:23.620 xcodebuild[1468:47383] [MT] IDEDistribution: -[IDEDistributionLogging _createLoggingBundleAtPath:]: Created bundle at path '/var/folders/60/0l_1znnd7ds3mfnnm2svn9t00000gn/T/testsx_2017-07-14_09-13-23.546.xcdistributionlogs'.
+error: exportArchive: exportOptionsPlist error for key 'method': expected one of {}, but found development
+
+Error Domain=IDEFoundationErrorDomain Code=1 "exportOptionsPlist error for key 'method': expected one of {}, but found development" UserInfo={NSLocalizedDescription=exportOptionsPlist error for key 'method': expected one of {}, but found development}
+
+** EXPORT FAILED **
+[09:13:23]: [31mExit status: 70[0m
+[09:13:23]: [33m📋  For a more detailed error log, check the full log at:[0m
+[09:13:23]: [33m📋  /Users/wake/Library/Logs/gym/testsx-testsx.log[0m
++--------------------+--------------------------------------+
+|                       [33mLane Context[0m                        |
++--------------------+--------------------------------------+
+| DEFAULT_PLATFORM   | ios                                  |
+| PLATFORM_NAME      | ios                                  |
+| LANE_NAME          | ios beta                             |
+| SIGH_PROFILE_PATH  | /Users/wake/Desktop/testsx/Developm  |
+|                    | ent_com.intelcent.wetalkwork.mobile  |
+|                    | provision                            |
+| SIGH_PROFILE_PATHS | ["/Users/wake/Desktop/testsx/Develo  |
+|                    | pment_com.intelcent.wetalkwork.mobi  |
+|                    | leprovision"]                        |
+| SIGH_UDID          | 0a8aa02e-eaf8-4558-a9c8-860031c7dc3  |
+|                    | 6                                    |
+| SIGH_UUID          | 0a8aa02e-eaf8-4558-a9c8-860031c7dc3  |
+|                    | 6                                    |
+| SIGH_PROFILE_TYPE  | development                          |
++--------------------+--------------------------------------+
+[09:13:23]: [31mError packaging up the application[0m
+
++------+---------------------+-------------+
+|             [32mfastlane summary[0m             |
++------+---------------------+-------------+
+| Step | Action              | Time (in s) |
++------+---------------------+-------------+
+| 1    | Verifying required  | 0           |
+|      | fastlane version    |             |
+| 2    | default_platform    | 0           |
+| 3    | sigh                | 37          |
+| 💥   | [31mgym[0m                 | 113         |
++------+---------------------+-------------+
+
+[09:13:23]: [31mfastlane finished with errors[0m
+
+[32m#######################################################################[0m
+[32m# fastlane 2.46.1 is available. You are on 2.28.3.[0m
+[32m# You should use the latest version.[0m
+[32m# Please update using `fastlane update_fastlane`.[0m
+[32m#######################################################################[0m
+
+[32m2.46.1 Improved build error output[0m
+* [gym] Improve build error output to be more clear (#9727) via Felix Krause
+* Fix grammer mistakes in docs (#9731) via Justin Swart
+* Fix markdown formating in iTunesConnect (#9725) via Eugene Oskin
+* add the word 'you' that was missing (#9713) via Tim Myers
+
+This release will make it easier to see the raw `xcodebuild` error message when something goes wrong during code ssigning or building your app :rocket:
+
+[32m2.46.0 Overall improvements[0m
+* Catch OpenSSL SSL error as well as Faraday to show instructions (#9680) via Felix Krause
+* Improve error message instructions for OpenSSL errors (#9681) via Felix Krause
+* Recursively search through `apk` directory in gradle action (#9688) via Felix Krause
+* Update gym runner to explicitly return the path (#9705) via Felix Krause
+* Update gym action to work if no ipa path is returned (#9706) via Felix Krause
+* Fix gym action and implementation when user provide path instead of hash (#9701) via Felix Krause
+* Allow the slather action to accept multiple binary_basename and binary_file arguments (#9696) via Renaud Lienhart
+* Fix google_play_track_version_codes options (#9693) via Pan Thomakos
+* Plugin scores: follow redirects (#9659) via Felix Krause
+
+[32m2.45.0 Improved docs and bugfixes[0m
+* Improve documentation across all of fastlane (#9665) via Wolfgang Lutz
+* Fix using the wrong team ID/Name in precheck from Appfile (#9656) via Felix Krause
+* Remove Bundler.setup in favor of shelling out to the Bundler in a new plugin directory in unit tests. (#9650) via Jimmy Dee
+* Add verification of Xcode version when running fastlane (#9609) via Felix Krause
+* Imporve match nuke readme (#9635) via Felix Krause
+* Add `google_play_track_version_codes` action (#9634) via Pan Thomakos
+* Detect number of tests for fastlane plugins and score accordingly (#9632) via Felix Krause
+
+[32mTo see all new releases, open https://github.com/fastlane/fastlane/releases[0m
+
+[32mPlease update using `fastlane update_fastlane`[0m
+[31m
+[!] Error packaging up the application[0m
+[09:24:06]: [33mSeems like launching fastlane takes a while[0m
+[09:24:06]: [33mfastlane detected a Gemfile in this directory[0m
+[09:24:06]: [33mhowever it seems like you don't use `bundle exec`[0m
+[09:24:06]: [33mto launch fastlane faster, please use[0m
+[09:24:06]: 
+[09:24:06]: [4m[36m$ bundle exec fastlane beta[0m[0m
+[09:24:06]: [33mFor more information, check out https://guides.cocoapods.org/using/a-gemfile.html[0m
+[09:24:08]: [33mPlugin 'Pgyer' overwrites already loaded action 'pgyer'[0m
++-----------------------+---------+--------+
+|               [32mUsed plugins[0m               |
++-----------------------+---------+--------+
+| Plugin                | Version | Action |
++-----------------------+---------+--------+
+| fastlane-plugin-pgyer | 0.2.1   | pgyer  |
++-----------------------+---------+--------+
+
+[09:24:08]: [32m-------------------------------------------------[0m
+[09:24:08]: [32m--- Step: Verifying required fastlane version ---[0m
+[09:24:08]: [32m-------------------------------------------------[0m
+[09:24:08]: Your fastlane version 2.28.3 matches the minimum requirement of 2.28.3  ✅
+[09:24:08]: [32m------------------------------[0m
+[09:24:08]: [32m--- Step: default_platform ---[0m
+[09:24:08]: [32m------------------------------[0m
+[09:24:08]: [32mDriving the lane 'ios beta' 🚀[0m
+[09:24:08]: [32m------------------[0m
+[09:24:08]: [32m--- Step: sigh ---[0m
+[09:24:08]: [32m------------------[0m
+
++-------------------------------------+---------------------------+
+|                     [32mSummary for sigh 2.28.3[0m                     |
++-------------------------------------+---------------------------+
+| development                         | true                      |
+| adhoc                               | false                     |
+| skip_install                        | false                     |
+| force                               | false                     |
+| app_identifier                      | com.intelcent.wetalkwork  |
+| username                            | yzj11223344556677@163.com |
+| team_id                             | ZBN7V8GLHG                |
+| ignore_profiles_with_different_name | false                     |
+| skip_fetch_profiles                 | false                     |
+| skip_certificate_verification       | false                     |
+| platform                            | ios                       |
++-------------------------------------+---------------------------+
+
+[09:24:09]: Starting login with user 'yzj11223344556677@163.com'
+[09:24:16]: Successfully logged in
+[09:24:16]: Fetching profiles...
+[09:24:21]: Verifying certificates...
+[09:24:32]: Certificate for Provisioning Profile 'wt-dev-push' not available locally: DANMH3272E, skipping this one...
+[09:24:32]: [32mFound 1 matching profile(s)[0m
+[09:24:32]: [33mDownloading provisioning profile...[0m
+[09:24:33]: [32mSuccessfully downloaded provisioning profile...[0m
+[09:24:33]: Installing provisioning profile...
+[32m/Users/wake/Desktop/testsx/Development_com.intelcent.wetalkwork.mobileprovision[0m
+[09:24:34]: Setting Provisioning Profile type to 'development'
+[09:24:34]: [32m-----------------[0m
+[09:24:34]: [32m--- Step: gym ---[0m
+[09:24:34]: [32m-----------------[0m
+[09:24:35]: [4m[36m$ xcodebuild -list -project ./testsx.xcodeproj[0m[0m
+[09:24:45]: [33mCommand timed out after 10 seconds on try 1 of 4, trying again...[0m
+[09:24:51]: [4m[36m$ xcodebuild clean -showBuildSettings -scheme testsx -project ./testsx.xcodeproj[0m[0m
+
++----------------------+--------------------------------------+
+|                   [32mSummary for gym 2.28.3[0m                    |
++----------------------+--------------------------------------+
+| scheme               | testsx                               |
+| export_method        | development                          |
+| project              | ./testsx.xcodeproj                   |
+| destination          | generic/platform=iOS                 |
+| output_name          | testsx                               |
+| build_path           | /Users/wake/Library/Developer/Xcode  |
+|                      | /Archives/2017-07-14                 |
+| clean                | false                                |
+| output_directory     | .                                    |
+| silent               | false                                |
+| skip_package_ipa     | false                                |
+| use_legacy_build_api | false                                |
+| buildlog_path        | ~/Library/Logs/gym                   |
+| xcode_path           | /Applications/Xcode.app              |
++----------------------+--------------------------------------+
+
+[09:24:53]: [4m[36m$ set -o pipefail && xcodebuild -scheme testsx -project ./testsx.xcodeproj -destination 'generic/platform=iOS' -archivePath /Users/wake/Library/Developer/Xcode/Archives/2017-07-14/testsx\ 2017-07-14\ 09.24.53.xcarchive archive | tee /Users/wake/Library/Logs/gym/testsx-testsx.log | xcpretty[0m[0m
+[09:24:56]: [35m[33m▸[0m [39;1mBuilding[0m testsx/testsx [Release][0m
+[09:24:56]: [35m[33m▸[0m [39;1mCheck Dependencies[0m
+[09:24:57]: [35m[33m▸[0m [39;1mCompiling[0m AppDelegate.m[0m
+[09:25:00]: [35m[33m▸[0m [39;1mCompiling[0m main.m[0m
+[09:25:00]: [35m[33m▸[0m [39;1mCompiling[0m ViewController.m[0m
+[09:25:00]: [35m[33m▸[0m [39;1mCompiling[0m ViewController.m[0m
+[09:25:00]: [35m[33m▸[0m [39;1mCompiling[0m AppDelegate.m[0m
+[09:25:00]: [35m[33m▸[0m [39;1mCompiling[0m main.m[0m
+[09:25:00]: [35m[33m▸[0m [39;1mLinking[0m testsx[0m
+[09:25:01]: [35m[33m▸[0m [39;1mLinking[0m testsx[0m
+[09:25:01]: [35m[33m▸[0m [39;1mCompiling[0m LaunchScreen.storyboard[0m
+[09:25:07]: [35m[33m▸[0m [39;1mCompiling[0m Main.storyboard[0m
+[09:25:07]: [35m[33m▸[0m [39;1mProcessing[0m Info.plist[0m
+[09:25:07]: [35m[33m▸[0m [39;1mGenerating 'testsx.app.dSYM'[0m
+[09:25:07]: [35m[33m▸[0m [39;1mTouching[0m testsx.app[0m
+[09:25:07]: [35m[33m▸[0m [39;1mSigning[0m /Users/wake/Library/Developer/Xcode/DerivedData/testsx-gfihegjmktnpfkbwqjqtawoqcblo/Build/Intermediates/ArchiveIntermediates/testsx/InstallationBuildProductsLocation/Applications/testsx.app[0m
+[09:25:12]: [35m[33m▸[0m [39;1mTouching[0m testsx.app.dSYM[0m
+[09:25:25]: [35m[33m▸[0m [39;1mArchive[0m Succeeded[0m
+[09:25:29]: [33mGenerated plist file with the following values:[0m
+[09:25:29]: ▸ [35m-----------------------------------------[0m
+[09:25:29]: ▸ [35m{[0m
+[09:25:29]: ▸ [35m  "method": "development"[0m
+[09:25:29]: ▸ [35m}[0m
+[09:25:29]: ▸ [35m-----------------------------------------[0m
+[09:25:29]: [4m[36m$ /usr/bin/xcrun /Users/wake/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.28.3/gym/lib/assets/wrap_xcodebuild/xcbuild-safe.sh -exportArchive -exportOptionsPlist '/var/folders/60/0l_1znnd7ds3mfnnm2svn9t00000gn/T/gym_config20170714-1550-brje3g.plist' -archivePath /Users/wake/Library/Developer/Xcode/Archives/2017-07-14/testsx\ 2017-07-14\ 09.24.53.xcarchive -exportPath '/var/folders/60/0l_1znnd7ds3mfnnm2svn9t00000gn/T/gym_output20170714-1550-r3g8os' [0m[0m
+[09:25:43]: Compressing 1 dSYM(s)
+[09:25:43]: [4m[36m$ cd '/Users/wake/Library/Developer/Xcode/Archives/2017-07-14/testsx 2017-07-14 09.24.53.xcarchive/dSYMs' && zip -r '/Users/wake/Desktop/testsx/testsx.app.dSYM.zip' *.dSYM[0m[0m
+[09:25:44]: ▸ [35mupdating: testsx.app.dSYM/ (stored 0%)[0m
+[09:25:44]: ▸ [35mupdating: testsx.app.dSYM/Contents/ (stored 0%)[0m
+[09:25:44]: ▸ [35mupdating: testsx.app.dSYM/Contents/Info.plist (deflated 52%)[0m
+[09:25:44]: ▸ [35mupdating: testsx.app.dSYM/Contents/Resources/ (stored 0%)[0m
+[09:25:44]: ▸ [35mupdating: testsx.app.dSYM/Contents/Resources/DWARF/ (stored 0%)[0m
+[09:25:44]: ▸ [35mupdating: testsx.app.dSYM/Contents/Resources/DWARF/testsx (deflated 61%)[0m
+
+[09:25:44]: [32mSuccessfully exported and compressed dSYM file[0m
+[09:25:44]: [32mSuccessfully exported and signed the ipa file:[0m
+[09:25:44]: /Users/wake/Desktop/testsx/testsx.ipa
+[09:25:44]: [32m--------------------[0m
+[09:25:44]: [32m--- Step: ../abc ---[0m
+[09:25:44]: [32m--------------------[0m
+[09:25:44]: [4m[36m$ ../abc[0m[0m
+[09:25:44]: ▸ [35m“AAA”[0m
+[09:25:44]: ▸ [35m/Users/wake/Desktop/testsx/fastlane[0m
+
++------+---------------------+-------------+
+|             [32mfastlane summary[0m             |
++------+---------------------+-------------+
+| Step | Action              | Time (in s) |
++------+---------------------+-------------+
+| 1    | Verifying required  | 0           |
+|      | fastlane version    |             |
+| 2    | default_platform    | 0           |
+| 3    | sigh                | 25          |
+| 4    | gym                 | 70          |
+| 5    | ../abc              | 6           |
++------+---------------------+-------------+
+
+[09:25:51]: [32mfastlane.tools finished successfully 🎉[0m
+
+[32m#######################################################################[0m
+[32m# fastlane 2.46.1 is available. You are on 2.28.3.[0m
+[32m# You should use the latest version.[0m
+[32m# Please update using `fastlane update_fastlane`.[0m
+[32m#######################################################################[0m
+
+[32m2.46.1 Improved build error output[0m
+* [gym] Improve build error output to be more clear (#9727) via Felix Krause
+* Fix grammer mistakes in docs (#9731) via Justin Swart
+* Fix markdown formating in iTunesConnect (#9725) via Eugene Oskin
+* add the word 'you' that was missing (#9713) via Tim Myers
+
+This release will make it easier to see the raw `xcodebuild` error message when something goes wrong during code ssigning or building your app :rocket:
+
+[32m2.46.0 Overall improvements[0m
+* Catch OpenSSL SSL error as well as Faraday to show instructions (#9680) via Felix Krause
+* Improve error message instructions for OpenSSL errors (#9681) via Felix Krause
+* Recursively search through `apk` directory in gradle action (#9688) via Felix Krause
+* Update gym runner to explicitly return the path (#9705) via Felix Krause
+* Update gym action to work if no ipa path is returned (#9706) via Felix Krause
+* Fix gym action and implementation when user provide path instead of hash (#9701) via Felix Krause
+* Allow the slather action to accept multiple binary_basename and binary_file arguments (#9696) via Renaud Lienhart
+* Fix google_play_track_version_codes options (#9693) via Pan Thomakos
+* Plugin scores: follow redirects (#9659) via Felix Krause
+
+[32m2.45.0 Improved docs and bugfixes[0m
+* Improve documentation across all of fastlane (#9665) via Wolfgang Lutz
+* Fix using the wrong team ID/Name in precheck from Appfile (#9656) via Felix Krause
+* Remove Bundler.setup in favor of shelling out to the Bundler in a new plugin directory in unit tests. (#9650) via Jimmy Dee
+* Add verification of Xcode version when running fastlane (#9609) via Felix Krause
+* Imporve match nuke readme (#9635) via Felix Krause
+* Add `google_play_track_version_codes` action (#9634) via Pan Thomakos
+* Detect number of tests for fastlane plugins and score accordingly (#9632) via Felix Krause
+
+[32mTo see all new releases, open https://github.com/fastlane/fastlane/releases[0m
+
+[32mPlease update using `fastlane update_fastlane`[0m
+fastlane could not check for updates error: execution expired
+[09:27:17]: [33mSeems like launching fastlane takes a while[0m
+[09:27:17]: [33mfastlane detected a Gemfile in this directory[0m
+[09:27:17]: [33mhowever it seems like you don't use `bundle exec`[0m
+[09:27:17]: [33mto launch fastlane faster, please use[0m
+[09:27:17]: 
+[09:27:17]: [4m[36m$ bundle exec fastlane beta[0m[0m
+[09:27:17]: [33mFor more information, check out https://guides.cocoapods.org/using/a-gemfile.html[0m
+[09:27:25]: [33mPlugin 'Pgyer' overwrites already loaded action 'pgyer'[0m
++-----------------------+---------+--------+
+|               [32mUsed plugins[0m               |
++-----------------------+---------+--------+
+| Plugin                | Version | Action |
++-----------------------+---------+--------+
+| fastlane-plugin-pgyer | 0.2.1   | pgyer  |
++-----------------------+---------+--------+
+
+[09:27:25]: [32m-------------------------------------------------[0m
+[09:27:25]: [32m--- Step: Verifying required fastlane version ---[0m
+[09:27:25]: [32m-------------------------------------------------[0m
+[09:27:25]: Your fastlane version 2.28.3 matches the minimum requirement of 2.28.3  ✅
+[09:27:25]: [32m------------------------------[0m
+[09:27:25]: [32m--- Step: default_platform ---[0m
+[09:27:25]: [32m------------------------------[0m
+[09:27:25]: [32mDriving the lane 'ios beta' 🚀[0m
+[09:27:25]: [32m------------------[0m
+[09:27:25]: [32m--- Step: sigh ---[0m
+[09:27:25]: [32m------------------[0m
+
++-------------------------------------+---------------------------+
+|                     [32mSummary for sigh 2.28.3[0m                     |
++-------------------------------------+---------------------------+
+| development                         | true                      |
+| adhoc                               | false                     |
+| skip_install                        | false                     |
+| force                               | false                     |
+| app_identifier                      | com.intelcent.wetalkwork  |
+| username                            | yzj11223344556677@163.com |
+| team_id                             | ZBN7V8GLHG                |
+| ignore_profiles_with_different_name | false                     |
+| skip_fetch_profiles                 | false                     |
+| skip_certificate_verification       | false                     |
+| platform                            | ios                       |
++-------------------------------------+---------------------------+
+
+[09:27:25]: Starting login with user 'yzj11223344556677@163.com'
+[09:27:31]: Successfully logged in
+[09:27:31]: Fetching profiles...
+[09:27:33]: Verifying certificates...
+[09:27:47]: Certificate for Provisioning Profile 'wt-dev-push' not available locally: DANMH3272E, skipping this one...
+[09:27:48]: [32mFound 1 matching profile(s)[0m
+[09:27:48]: [33mDownloading provisioning profile...[0m
+[09:27:49]: [32mSuccessfully downloaded provisioning profile...[0m
+[09:27:49]: Installing provisioning profile...
+[32m/Users/wake/Desktop/testsx/Development_com.intelcent.wetalkwork.mobileprovision[0m
+[09:27:49]: Setting Provisioning Profile type to 'development'
+[09:27:49]: [32m-----------------[0m
+[09:27:49]: [32m--- Step: gym ---[0m
+[09:27:49]: [32m-----------------[0m
+[09:27:51]: [4m[36m$ xcodebuild -list -project ./testsx.xcodeproj[0m[0m
+[09:28:01]: [33mCommand timed out after 10 seconds on try 1 of 4, trying again...[0m
+[09:28:04]: [4m[36m$ xcodebuild clean -showBuildSettings -scheme testsx -project ./testsx.xcodeproj[0m[0m
+
++----------------------+--------------------------------------+
+|                   [32mSummary for gym 2.28.3[0m                    |
++----------------------+--------------------------------------+
+| scheme               | testsx                               |
+| export_method        | development                          |
+| project              | ./testsx.xcodeproj                   |
+| destination          | generic/platform=iOS                 |
+| output_name          | testsx                               |
+| build_path           | /Users/wake/Library/Developer/Xcode  |
+|                      | /Archives/2017-07-14                 |
+| clean                | false                                |
+| output_directory     | .                                    |
+| silent               | false                                |
+| skip_package_ipa     | false                                |
+| use_legacy_build_api | false                                |
+| buildlog_path        | ~/Library/Logs/gym                   |
+| xcode_path           | /Applications/Xcode.app              |
++----------------------+--------------------------------------+
+
+[09:28:06]: [4m[36m$ set -o pipefail && xcodebuild -scheme testsx -project ./testsx.xcodeproj -destination 'generic/platform=iOS' -archivePath /Users/wake/Library/Developer/Xcode/Archives/2017-07-14/testsx\ 2017-07-14\ 09.28.06.xcarchive archive | tee /Users/wake/Library/Logs/gym/testsx-testsx.log | xcpretty[0m[0m
+[09:28:08]: [35m[33m▸[0m [39;1mBuilding[0m testsx/testsx [Release][0m
+[09:28:08]: [35m[33m▸[0m [39;1mCheck Dependencies[0m
+[09:28:09]: [35m[33m▸[0m [39;1mCompiling[0m ViewController.m[0m
+[09:28:23]: [35m[33m▸[0m [39;1mCompiling[0m main.m[0m
+[09:28:23]: [35m[33m▸[0m [39;1mCompiling[0m AppDelegate.m[0m
+[09:28:23]: [35m[33m▸[0m [39;1mCompiling[0m ViewController.m[0m
+[09:28:23]: [35m[33m▸[0m [39;1mCompiling[0m AppDelegate.m[0m
+[09:28:23]: [35m[33m▸[0m [39;1mCompiling[0m main.m[0m
+[09:28:23]: [35m[33m▸[0m [39;1mLinking[0m testsx[0m
+[09:28:24]: [35m[33m▸[0m [39;1mLinking[0m testsx[0m
+[09:28:24]: [35m[33m▸[0m [39;1mCompiling[0m LaunchScreen.storyboard[0m
+[09:28:28]: [35m[33m▸[0m [39;1mCompiling[0m Main.storyboard[0m
+[09:28:28]: [35m[33m▸[0m [39;1mProcessing[0m Info.plist[0m
+[09:28:28]: [35m[33m▸[0m [39;1mGenerating 'testsx.app.dSYM'[0m
+[09:28:29]: [35m[33m▸[0m [39;1mTouching[0m testsx.app[0m
+[09:28:29]: [35m[33m▸[0m [39;1mSigning[0m /Users/wake/Library/Developer/Xcode/DerivedData/testsx-gfihegjmktnpfkbwqjqtawoqcblo/Build/Intermediates/ArchiveIntermediates/testsx/InstallationBuildProductsLocation/Applications/testsx.app[0m
+[09:28:32]: [35m[33m▸[0m [39;1mTouching[0m testsx.app.dSYM[0m
+[09:28:38]: [35m[33m▸[0m [39;1mArchive[0m Succeeded[0m
+[09:28:43]: [33mGenerated plist file with the following values:[0m
+[09:28:43]: ▸ [35m-----------------------------------------[0m
+[09:28:43]: ▸ [35m{[0m
+[09:28:43]: ▸ [35m  "method": "development"[0m
+[09:28:43]: ▸ [35m}[0m
+[09:28:43]: ▸ [35m-----------------------------------------[0m
+[09:28:43]: [4m[36m$ /usr/bin/xcrun /Users/wake/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.28.3/gym/lib/assets/wrap_xcodebuild/xcbuild-safe.sh -exportArchive -exportOptionsPlist '/var/folders/60/0l_1znnd7ds3mfnnm2svn9t00000gn/T/gym_config20170714-1755-135tee3.plist' -archivePath /Users/wake/Library/Developer/Xcode/Archives/2017-07-14/testsx\ 2017-07-14\ 09.28.06.xcarchive -exportPath '/var/folders/60/0l_1znnd7ds3mfnnm2svn9t00000gn/T/gym_output20170714-1755-1duhgy1' [0m[0m
+[09:28:55]: Compressing 1 dSYM(s)
+[09:28:55]: [4m[36m$ cd '/Users/wake/Library/Developer/Xcode/Archives/2017-07-14/testsx 2017-07-14 09.28.06.xcarchive/dSYMs' && zip -r '/Users/wake/Desktop/testsx/testsx.app.dSYM.zip' *.dSYM[0m[0m
+[09:28:56]: ▸ [35m  adding: testsx.app.dSYM/ (stored 0%)[0m
+[09:28:56]: ▸ [35m  adding: testsx.app.dSYM/Contents/ (stored 0%)[0m
+[09:28:56]: ▸ [35m  adding: testsx.app.dSYM/Contents/Info.plist (deflated 52%)[0m
+[09:28:56]: ▸ [35m  adding: testsx.app.dSYM/Contents/Resources/ (stored 0%)[0m
+[09:28:56]: ▸ [35m  adding: testsx.app.dSYM/Contents/Resources/DWARF/ (stored 0%)[0m
+[09:28:56]: ▸ [35m  adding: testsx.app.dSYM/Contents/Resources/DWARF/testsx (deflated 61%)[0m
+
+[09:28:56]: [32mSuccessfully exported and compressed dSYM file[0m
+[09:28:56]: [32mSuccessfully exported and signed the ipa file:[0m
+[09:28:56]: /Users/wake/Desktop/testsx/testsx.ipa
+[09:28:56]: [32m--------------------[0m
+[09:28:56]: [32m--- Step: ../abc ---[0m
+[09:28:56]: [32m--------------------[0m
+[09:28:56]: [4m[36m$ ../abc[0m[0m
+[09:28:56]: ▸ [35m“AAA”[0m
+[09:28:56]: ▸ [35m/Users/wake/Desktop/testsx/fastlane[0m
+
++------+---------------------+-------------+
+|             [32mfastlane summary[0m             |
++------+---------------------+-------------+
+| Step | Action              | Time (in s) |
++------+---------------------+-------------+
+| 1    | Verifying required  | 0           |
+|      | fastlane version    |             |
+| 2    | default_platform    | 0           |
+| 3    | sigh                | 24          |
+| 4    | gym                 | 66          |
+| 5    | ../abc              | 1           |
++------+---------------------+-------------+
+
+[09:28:58]: [32mfastlane.tools finished successfully 🎉[0m
+
+[32m#######################################################################[0m
+[32m# fastlane 2.46.1 is available. You are on 2.28.3.[0m
+[32m# You should use the latest version.[0m
+[32m# Please update using `fastlane update_fastlane`.[0m
+[32m#######################################################################[0m
+
+[32m2.46.1 Improved build error output[0m
+* [gym] Improve build error output to be more clear (#9727) via Felix Krause
+* Fix grammer mistakes in docs (#9731) via Justin Swart
+* Fix markdown formating in iTunesConnect (#9725) via Eugene Oskin
+* add the word 'you' that was missing (#9713) via Tim Myers
+
+This release will make it easier to see the raw `xcodebuild` error message when something goes wrong during code ssigning or building your app :rocket:
+
+[32m2.46.0 Overall improvements[0m
+* Catch OpenSSL SSL error as well as Faraday to show instructions (#9680) via Felix Krause
+* Improve error message instructions for OpenSSL errors (#9681) via Felix Krause
+* Recursively search through `apk` directory in gradle action (#9688) via Felix Krause
+* Update gym runner to explicitly return the path (#9705) via Felix Krause
+* Update gym action to work if no ipa path is returned (#9706) via Felix Krause
+* Fix gym action and implementation when user provide path instead of hash (#9701) via Felix Krause
+* Allow the slather action to accept multiple binary_basename and binary_file arguments (#9696) via Renaud Lienhart
+* Fix google_play_track_version_codes options (#9693) via Pan Thomakos
+* Plugin scores: follow redirects (#9659) via Felix Krause
+
+[32m2.45.0 Improved docs and bugfixes[0m
+* Improve documentation across all of fastlane (#9665) via Wolfgang Lutz
+* Fix using the wrong team ID/Name in precheck from Appfile (#9656) via Felix Krause
+* Remove Bundler.setup in favor of shelling out to the Bundler in a new plugin directory in unit tests. (#9650) via Jimmy Dee
+* Add verification of Xcode version when running fastlane (#9609) via Felix Krause
+* Imporve match nuke readme (#9635) via Felix Krause
+* Add `google_play_track_version_codes` action (#9634) via Pan Thomakos
+* Detect number of tests for fastlane plugins and score accordingly (#9632) via Felix Krause
+
+[32mTo see all new releases, open https://github.com/fastlane/fastlane/releases[0m
+
+[32mPlease update using `fastlane update_fastlane`[0m
